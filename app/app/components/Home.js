@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import routes from '../constants/routes';
 import styles from './Home.css';
 
+import Wrapper from './RigUI/Wrapper.js';
+
 type Props = {};
 
 export default class Home extends Component<Props> {
@@ -11,10 +13,9 @@ export default class Home extends Component<Props> {
 
   render() {
     return (
-      <div className={styles.container} data-tid="container">
-        <h2>Home</h2>
-        <Link to={routes.COUNTER}>to Counter</Link>
-      </div>
+      <Wrapper title="QUALIFY MODE" info="12:42PM">
+        <p>HELLO WORLD</p>
+      </Wrapper>
     );
   }
 }

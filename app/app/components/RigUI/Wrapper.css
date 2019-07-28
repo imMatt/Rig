@@ -1,0 +1,28 @@
+.container {
+  background: #000;
+  width:580px;
+  height:1004px;
+
+  padding:10px;
+}
+
+.container h2 {
+  font-size: 5rem;
+}
+
+.container a {
+  font-size: 1.4rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 4px solid white;
+  margin-bottom: 10px;
+}
+
+.header > h1,h2,h3,h3,h5,h6 {
+  color: white;
+  padding: 0;
+  margin: 10px 0 10px 0;
+}
