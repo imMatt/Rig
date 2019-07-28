@@ -38,11 +38,9 @@ body {
     /* Resolution set to match the display from 
     https://www.ebay.com.au/itm/7-inch-HDMI-LCD-H-IPS-Capacitive-Touch-Screen-LCD-for-Raspberry-Pi-Black-GD/163549918737
     */
+    
     height: 1024px;
-    min-height: 1024px;
-
-    width: 580px;
-    min-width: 580px;
+    width: 600px;
 
     border: #ddd solid 4px;
     padding: 10px;
@@ -80,7 +78,7 @@ table {
     font-family: monospace;
     text-transform: uppercase;
     text-align: left;
-    font-size: 26px;
+    font-size: 30px;
 }
 
 th {
