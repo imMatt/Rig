@@ -5,6 +5,8 @@ import styles from './Wrapper.css';
 import Nav from './Nav.js';
 import NavItem from './NavItem.js';
 
+import routes from '../../constants/routes';
+
 type Props = {};
 
 export default class Home extends Component<Props> {
@@ -20,10 +22,10 @@ export default class Home extends Component<Props> {
         {this.props.children}
 
         <Nav>
-          <NavItem label="A" icon="fas fa-forward" />
-          <NavItem label="B" icon="fas fa-forward" />
-          <NavItem label="C" icon="fas fa-forward" />
-          <NavItem label="D" icon="fas fa-forward" />
+          <NavItem label="HOME" icon="fas fa-home" to={routes.HOME}/>
+          <NavItem label="TIME" icon="fas fa-clock" to={routes.TIMING}/>
+          <NavItem label="C" icon="fas fa-forward" to={routes.TIMING}/>
+          <NavItem label="T4" icon="fas fa-forward" to={routes.TIMING}/>
         </Nav>
       </div>
     );

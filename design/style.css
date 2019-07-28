@@ -127,6 +127,10 @@ td {
     color: white;
 }
 
+.navlink {
+    width: 200px;
+}
+
 .navitem {
     
     border: 5px solid black;
@@ -138,6 +142,10 @@ td {
 
     background: #1a1a1a;
     transition: background-color 200ms ease;
+}
+
+a {
+    width: 100%;
 }
 
 .navitem:hover {
