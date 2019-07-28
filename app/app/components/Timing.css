@@ -12,3 +12,50 @@
 .container a {
   font-size: 1.4rem;
 }
+
+.sessiontable > *{
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+table {
+    color: white;
+    font-family: "consolas";
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 30px;
+}
+
+th {
+    color: cyan;
+}
+
+tr {
+
+}
+
+td {
+    padding: 5px;
+        
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.new {
+    color: magenta;
+}
+
+.us {
+    background: white;
+    color: black;
+}
+
+.green {
+    color: lime;
+}
+
+.red {
+    color: red;
+}
