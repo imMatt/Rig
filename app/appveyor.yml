@@ -1,38 +1,45 @@
-image: Visual Studio 2017
+# http://www.appveyor.com/docs/appveyor-yml
 
-platform:
-  - x64
-
-environment:
-  matrix:
-    - nodejs_version: 10
-
-cache:
-  - '%LOCALAPPDATA%/Yarn'
-  - node_modules
-  - flow-typed
-  - '%USERPROFILE%\.electron'
-
-matrix:
-  fast_finish: true
-
-build: off
-
+# Set build version format here instead of in the admin panel
 version: '{build}'
 
-shallow_clone: true
+# Do not build on gh tags
+skip_tags: true
 
-clone_depth: 1
+# Test against these versions of Node.js
+environment:
+  matrix:
+    # Node versions to run
+    - nodejs_version: 'Current'
+    - nodejs_version: 'LTS'
 
+# Fix line endings in Windows. (runs before repo cloning)
+init:
+  - git config --global core.autocrlf input
+
+# Install scripts--runs after repo cloning
 install:
-  - ps: Install-Product node $env:nodejs_version x64
-  - set CI=true
-  - yarn
+  # Install the latest stable version of Node
+  - ps: Install-Product node $env:nodejs_version
+  - npm ci
 
+# Disable automatic builds
+build: off
+
+# Post-install test scripts
 test_script:
-  - yarn package-ci
-  - yarn lint
-  # - yarn flow
-  - yarn test
-  - yarn build-e2e
-  - yarn test-e2e
+  # Output debugging info
+  - node --version
+  - node ./internals/scripts/generate-templates-for-linting
+  # run tests and run build
+  - npm run test
+  - npm run build
+
+# Cache node_modules for faster builds
+cache:
+  - node_modules -> package.json
+
+# remove, as appveyor doesn't support secure variables on pr builds
+# so `COVERALLS_REPO_TOKEN` cannot be set, without hard-coding in this file
+#on_success:
+#- npm run coveralls
