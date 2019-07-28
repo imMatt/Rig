@@ -1,0 +1,32 @@
+For a POC I want this to be useful for a league race race
+
+QUALIFY:
+    1. Warning to disable fuel fill-up when we pit in
+    2. View live timing for the current session
+    3. Number of laps completed
+    4. Tyre wear status?
+    5. Fuel In cars
+    6. Track temp and perhaps if its trending up or down or history
+
+RACE:
+
+    1. Need a way to exit (qually) iracing - not sure if there's a way for us to bind this
+    2. Find and register for hosted session
+    3. Join and load fully without leaving rig
+    4. Pre race checklists? Could be cool A380 virtual checklist inspo
+        a) Uncheck tyres for sprint
+        b) Crew chief started
+        c) GPU fans running
+        d) Pedal check
+        e) Brake Bias Set
+        d) TC Set
+
+
+POST-RACE:
+
+    Summary screen that will run near race, which ill see when i take off my virtual
+
+    1. Position in big text
+    2. Incidents in big text
+    3. Lap Number
+    4. Summary of either top 10 or like 5 cars either side of you?

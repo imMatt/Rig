@@ -1,0 +1,253 @@
+@font-face {
+    font-family: bmw;
+    src: url("./BMWHelvetica-Bold.otf") format("opentype");
+}
+
+body {
+    font-family: bmw, 'Open Sans', sans-serif;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    align-content: space-around;
+
+    background: black;
+
+}
+
+.limebg {
+    background: lime;
+}
+
+.redbg  {
+    background: red;
+}
+
+.info {
+    color: black;
+    padding:0px 5px 0px 5px;
+    text-align: center;
+}
+
+.info > h2 {
+    color: black;
+    text-transform: uppercase;
+}
+
+.outer {
+    /* Resolution set to match the display from 
+    https://www.ebay.com.au/itm/7-inch-HDMI-LCD-H-IPS-Capacitive-Touch-Screen-LCD-for-Raspberry-Pi-Black-GD/163549918737
+    */
+    height: 1024px;
+    min-height: 1024px;
+
+    width: 580px;
+    min-width: 580px;
+
+    border: #ddd solid 4px;
+    padding: 10px;
+    margin:10px;
+
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 4px solid white;
+    margin-bottom: 10px;
+}
+
+.header > h1,h2,h3,h3,h5,h6 {
+    color: white;
+    padding: 0;
+    margin: 10px 0 10px 0;
+}
+
+.back > h1 {
+    color: red;
+    padding: 0;
+    margin: 10px 0 10px 0;
+}
+
+.sessiontable > *{
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+table {
+    color: white;
+    font-family: monospace;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 26px;
+}
+
+th {
+    color: cyan;
+}
+
+tr {
+
+}
+
+td {
+    padding: 5px;
+        
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.new {
+    color: magenta;
+}
+
+.us {
+    background: white;
+    color: black;
+}
+
+.green {
+    color: lime;
+}
+
+.red {
+    color: red;
+}
+
+.nav {
+    position:absolute;
+    bottom: 10px;
+    width: calc(100% - 20px);
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: 1;
+    align-content: center;
+    color: white;
+}
+
+.navitem {
+    
+    border: 5px solid black;
+
+    flex-grow: 1;
+    flex-basis: 0;
+    text-align: center;
+    vertical-align: middle;
+
+    background: #1a1a1a;
+    transition: background-color 200ms ease;
+}
+
+.navitem:hover {
+    background: #000;
+}
+
+.navitem > div {
+    border: 1px solid white;
+}
+
+.navitem > div > p {
+
+}
+
+.navitem > div > i {
+    font-size: 32px;
+    margin-top:15px;
+}
+
+.keyvalue {
+    display: flex;
+    justify-content: space-between;
+    font-family: monospace;
+    font-size: 26px;
+}
+
+.checklist {
+
+}
+
+.checklist > .item.selected{
+}
+
+.checklist > .item > label > p {
+    color: white;
+    font-family: monospace;
+    text-transform: uppercase;
+    font-size: 26px;
+    padding-left: 10px;
+}
+
+/* custom checkbox */
+
+/* Customize the label (the container) */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    font-family: monospace;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: black;
+    border: 1px solid cyan;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
